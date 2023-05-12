@@ -1,4 +1,4 @@
-const API_KEY = "ccb937822715e38dc5efc1bcf3a0b193"; //ENTER YOUR API KEY
+const API_KEY = "cd3bbd3f1df50d287ca9503fe9da72c6"; //ENTER YOUR API KEY
 
 const cityName1 = document.querySelector("[data-cityName1]");
 const desc1 = document.querySelector("[data-weatherDesc1]");
