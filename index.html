@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Weatherly</title>
+</head>
+<body>
+
+    <div class="wrapper p-2">
+
+
+    <div class="flex justify-between items-center w-[1100px] mx-auto mt-2 py-4">
+        <div class="flex items-center gap-4">
+            <img src="./assets/icon.webp" height="50px" width="50px">
+            <h1 class="font-semibold text-[1.7rem] text-[#4807de]">weathify</h1>
+        </div>
+        <div class="hidden lg:flex items-center gap-10">
+            <a class="cursor-pointer hover:text-[#4807de]" href="#home">Home</a>
+            <a class="cursor-pointer hover:text-[#4807de]" href="#search">Search Location</a>
+            <a class="cursor-pointer hover:text-[#4807de]">About Us</a>
+        </div>
+    </div>
+        <!-- HERO SECTION -->
+
+        <div class="w-[11/12] max-w-[1200px] flex mx-auto py-5 flex-col md:flex-row px-5" id="home">
+            <div>
+                <img src="./assets/hero.png" alt="weather-landing" srcset="" class="md:max-h-[45rem] md:min-w-[460px] md:min-h-[460px] scale-[.90]">
+            </div>
+            <div class="flex flex-col gap-4 justify-center px-16">
+                <h1 class="text-[1.7rem] md:text-[2.8rem] font-semibold heading">Weather made <span class="text-[#4807de]">simple</span></h1>
+                <h1 class="text-[1.3rem] md:text-[1.9em]">get the information you need,</h1>
+                <h2 class="text-[1.3rem] md:text-[2rem] font-bold text-[#4807de]">when you need it.</h2>
+            </div>
+        </div>
+
+        <!-- TRUSTED BY -->
+
+        <div class="text-center text-white py-7 text-[1.9em] px-8 md:mt-14 people capitalize">
+            <h1> Trusted by many people over the earth</h1>
+        </div>
+
+        <!-- LOCATIONS WEATHER-->
+        <!-- <div class="text-center text-white py-7 text-[1.9em] px-8 md:mt-14 people capitalize">
+            The weather of the most searched places
+        </div> -->
+        <div class="flex p-10 gap-4 items-center justify-center flex-wrap weather-boxes py-20">
+            <!-- CITY 1 -->
+            <div class="flex flex-col border text-[1.5rem] weather-box">
+                <!-- CITY NAME -->
+                <p data-cityName1  class="text-[#4807de]"></p>
+                <!-- WEATHER DESCRIPTION -->
+                <p data-weatherDesc1 class="text-[1.2rem]"></p>
+                <!-- WEATHER ICON -->
+                <img data-weatherIcon1 class="max-w-[70px]">
+                <!-- TEMPERATURE -->
+                <p data-temp1></p>
+            </div>
+
+            <!-- CITY 2 -->
+            <div class="flex flex-col border text-[1.5rem] weather-box">
+                <!-- CITY NAME -->
+                <p data-cityName2 class="text-[#4807de]"></p>
+                <!-- WEATHER DESCRIPTION -->
+                <p data-weatherDesc2 class="text-[1.2rem]"></p>
+                <!-- WEATHER ICON -->
+                <img data-weatherIcon2 class="max-w-[70px]">
+                <!-- TEMPERATURE -->
+                <p data-temp2></p>
+            </div>
+
+            <!-- CITY 3 -->
+            <div class="flex flex-col border text-[1.5rem] weather-box">
+                <!-- CITY NAME -->
+                <p data-cityName3 class="text-[#4807de]"></p>
+                <!-- WEATHER DESCRIPTION -->
+                <p data-weatherDesc3 class="text-[1.2rem]"></p>
+                <!-- WEATHER ICON -->
+                <img data-weatherIcon3 class="max-w-[70px]">
+                <!-- TEMPERATURE -->
+                <p data-temp3></p>
+            </div>
+
+            <!-- CITY 4 -->
+            <div class="flex flex-col border text-[1.5rem] weather-box">
+                <!-- CITY NAME -->
+                <p data-cityName4 class="text-[#4807de]"></p>
+                <!-- WEATHER DESCRIPTION -->
+                <p data-weatherDesc4 class="text-[1.2rem]"></p>
+                <!-- WEATHER ICON -->
+                <img data-weatherIcon4 class="max-w-[70px]">
+                <!-- TEMPERATURE -->
+                <p data-temp4></p>
+            </div>
+
+            <!-- CITY 5 -->
+            <div class="flex flex-col border text-[1.5rem] weather-box">
+                <!-- CITY NAME -->
+                <p data-cityName5 class="text-[#4807de]"></p>
+                <!-- WEATHER DESCRIPTION -->
+                <p data-weatherDesc5 class="text-[1.2rem]"></p>
+                <!-- WEATHER ICON -->
+                <img data-weatherIcon5 class="max-w-[70px]">
+                <!-- TEMPERATURE -->
+                <p data-temp5></p>
+            </div>
+
+            <!-- CITY 6 -->
+            <div class="flex flex-col border text-[1.5rem] weather-box">
+                <!-- CITY NAME -->
+                <p data-cityName6 class="text-[#4807de]"></p>
+                <!-- WEATHER DESCRIPTION -->
+                <p data-weatherDesc6 class="text-[1.2rem]"></p>
+                <!-- WEATHER ICON -->
+                <img data-weatherIcon6 class="max-w-[70px]">
+                <!-- TEMPERATURE -->
+                <p data-temp6></p>
+            </div>
+        </div>
+
+        <!-- CURRENT LOCATION WEATHER -->
+        <div class="text-center text-white py-7 text-[1.9em] px-8 md:mt-14 people capitalize">
+            <h1> Get accurate weather report of your current location</h1>
+        </div>
+
+        <div class="text-center py-2 text-[1.9rem] px-8 md:mt-14 capitalize">
+            <h2>Your current location is <span class="font-semibold text-[3rem] text-[#4807de]" current-city></span></h2>
+        </div>
+        <div class="flex-col md:flex-row flex p-20 items-center justify-center wrap gap-10">
+            <div class="curr-location flex flex-col items-center justify-center">
+                <div class="flex gap-4">
+                    <h2 curr-city class="text-[1.5rem] mb-1"></h2>
+                    <!-- <h2 class="text-[2.4rem] mb-1"></h2> -->
+
+                    <img current-mapIcon class="map">
+                </div>
+                <p current-desc class="text-[1.5rem] uppercase"></p>
+                <img current-weatherIcon class="weather-img"></img>
+                <p current-temp class="text-[1.2rem]"></p>
+            </div>
+            <div class="parameter-container grid grid-cols-2 md:grid-cols-3 gap-10">
+
+                <!-- CARD 1 -->
+                <div class="parameter">
+                    <img src="./assets/wind.webp" >
+                    <p class="text-[#4807de]">Windspeed</p>
+                    <p data-windspeed></p>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="parameter">
+                    <img src="./assets/humidity.webp" >
+                    <p class="text-[#4807de]">Humidity</p>
+                    <p data-humidity></p>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="parameter">
+                    <img src="./assets/cloud.webp" >
+                    <p class="text-[#4807de]">Clouds</p>
+                    <p data-cloudiness></p>
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="parameter">
+                    <img src="./assets/pressure.webp" >
+                    <p class="text-[#4807de]">Pressure</p>
+                    <p data-pressure></p>
+                </div>
+
+                <!-- CARD 5 -->
+                <div class="parameter">
+                    <img src="./assets/max-temp.webp" >
+                    <p class="text-[#4807de]">Max Temperature</p>
+                    <p data-max-temp></p>
+                </div>    
+                
+                <!-- CARD 6 -->
+                <div class="parameter">
+                    <img src="./assets/min-temp.webp" >
+                    <p class="text-[#4807de]">Min Temperature</p>
+                    <p data-min-temp></p>
+                </div>    
+
+            </div>
+        </div>
+
+        <!-- search weather -->
+
+        <div class="text-center text-white py-7 text-[1.9em] px-8 md:mt-14 people capitalize mb-20">
+            <h1> Search for any location to get the weather data</h1>
+        </div>
+
+        <div id="search">
+
+            <div class="flex justify-center items-center">
+                <form class="form-container" data-searchForm class=" flex justify-center items-center">
+                    <input placeholder="Search for City..." data-searchInput class="bg-slate-200 px-6 py-2 md:px-12 rounded-lg md:py-4 mr-4">
+                    <button class="btn" type="submit">
+                        <div class="bg-[#4807de] text-white py-2 md:py-4 px-4 rounded-lg">SUBMIT</div>
+                    </button>
+                </form>
+            </div>
+
+
+            <div class="text-center py-2 text-[1.9rem] px-8 md:mt-14 capitalize">
+                <h2>Your Searched location is <span class="font-semibold text-[3rem] text-[#4807de]" current-city2></span></h2>
+            </div>
+            <div class="flex-col md:flex-row flex p-20 items-center justify-center wrap gap-10">
+                <div class="curr-location flex flex-col items-center justify-center">
+                    <div class="flex gap-4">
+                        <h2 curr-city22 class="text-[1.5rem] mb-1"></h2>
+                        <!-- <h2 class="text-[2.4rem] mb-1"></h2> -->
+    
+                        <img current-mapIcon2 class="map">
+                    </div>
+                    <p current-desc2 class="text-[1.5rem] uppercase"></p>
+                    <img current-weatherIcon2 class="weather-img"></img>
+                    <p current-temp2 class="text-[1.2rem]"></p>
+                </div>
+                <div class="parameter-container grid grid-cols-2 md:grid-cols-3 gap-10">
+    
+                    <!-- CARD 1 -->
+                    <div class="parameter">
+                        <img src="./assets/wind.webp" >
+                        <p class="text-[#4807de]">Windspeed</p>
+                        <p data-windspeed2></p>
+                    </div>
+    
+                    <!-- CARD 2 -->
+                    <div class="parameter">
+                        <img src="./assets/humidity.webp" >
+                        <p class="text-[#4807de]">Humidity</p>
+                        <p data-humidity2></p>
+                    </div>
+    
+                    <!-- CARD 3 -->
+                    <div class="parameter">
+                        <img src="./assets/cloud.webp" >
+                        <p class="text-[#4807de]">Clouds</p>
+                        <p data-cloudiness2></p>
+                    </div>
+    
+                    <!-- CARD 4 -->
+                    <div class="parameter">
+                        <img src="./assets/pressure.webp" >
+                        <p class="text-[#4807de]">Pressure</p>
+                        <p data-pressure2></p>
+                    </div>
+    
+                    <!-- CARD 5 -->
+                    <div class="parameter">
+                        <img src="./assets/max-temp.webp" >
+                        <p class="text-[#4807de]">Max Temperature</p>
+                        <p data-max-temp2></p>
+                    </div>    
+                    
+                    <!-- CARD 6 -->
+                    <div class="parameter">
+                        <img src="./assets/min-temp.webp" >
+                        <p class="text-[#4807de]">Min Temperature</p>
+                        <p data-min-temp2></p>
+                    </div>    
+    
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="./index.js">
+    </script>
+</body>
+</html>
