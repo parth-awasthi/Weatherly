@@ -1,4 +1,4 @@
-const API_KEY = "";
+const API_KEY = "cd3bbd3f1df50d287ca9503fe9da72c6";
 
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition((position) => {
